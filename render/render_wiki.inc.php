@@ -1084,7 +1084,7 @@ class FormatBlockLink extends FormatBlock
 
                         }
                         else if ($button) {
-                            $this->html= "<span class='$align'><a href='".asHtml($this->name)."'><img title='".asHtml($file->name)."' alt='".asHtml($file->name)."' src='".$PH->getUrl('fileDownloadAsImage',array('file'=>$file->id,'max_size'=>$max_size))."'></a></span>";
+                            $this->html= "<span class='$align'><a href='".asHref($this->name)."'><img title='".asHtml($file->name)."' alt='".asHtml($file->name)."' src='".$PH->getUrl('fileDownloadAsImage',array('file'=>$file->id,'max_size'=>$max_size))."'></a></span>";
                         }
                         else {
                             $this->html= "<a href='".$PH->getUrl('fileDownloadAsImage',array('file'=>$file->id))."'><img class='$align' title='".asHtml($file->name)."' alt='".asHtml($file->name)."' src='".$PH->getUrl('fileDownloadAsImage',array('file'=>$file->id,'max_size'=>$max_size))."'></a>";
