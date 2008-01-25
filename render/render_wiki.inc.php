@@ -1048,6 +1048,7 @@ class FormatBlockLink extends FormatBlock
                         $align='';
                         $max_size= '';
                         $framed= false;
+                        $button= false;
                         if($this->options) {
                             foreach($this->options as $o) {
                                 if($o == 'left') {
@@ -1066,6 +1067,9 @@ class FormatBlockLink extends FormatBlock
                                 else if($o == 'framed') {
                                     $framed= true;
                                 }
+                                else if($o == 'button') {
+                                    $button= true;
+                                }
                             }
                         }
                         if($framed) {
@@ -1078,6 +1082,9 @@ class FormatBlockLink extends FormatBlock
                                 $this->html.= '<span class=clear>&nbsp;</span>';
                             }
 
+                        }
+                        else if ($button) {
+                            $this->html= "<span class='$align'><a href='".asHtml($this->name)."'><img title='".asHtml($file->name)."' alt='".asHtml($file->name)."' src='".$PH->getUrl('fileDownloadAsImage',array('file'=>$file->id,'max_size'=>$max_size))."'></a></span>";
                         }
                         else {
                             $this->html= "<a href='".$PH->getUrl('fileDownloadAsImage',array('file'=>$file->id))."'><img class='$align' title='".asHtml($file->name)."' alt='".asHtml($file->name)."' src='".$PH->getUrl('fileDownloadAsImage',array('file'=>$file->id,'max_size'=>$max_size))."'></a>";
