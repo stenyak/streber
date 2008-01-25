@@ -1002,10 +1002,10 @@ class FormatBlockLink extends FormatBlock
             $target     = asCleanString($matches[2]);
                     
             if($this->name) {
-                $this->html= "<a class=extern title='" . asHtml($this->target).  "' href='". $type. "://" . asHtml($target) . "'>" . asHtml($this->name) . "</a>";
+                $this->html= "<a class=extern title='" . asHtml($this->target).  "' href='". $type. "://" . asHref($target) . "'>" . asHtml($this->name) . "</a>";
             }
             else {
-                $this->html= "<a  class=extern  title='" . asHtml($this->target).  "' href='". $type. "://" . asHtml($target) . "'>" . asHtml($this->target) . "</a>";
+                $this->html= "<a  class=extern  title='" . asHtml($this->target).  "' href='". $type. "://" . asHref($target) . "'>" . asHtml($this->target) . "</a>";
             }
                     
 

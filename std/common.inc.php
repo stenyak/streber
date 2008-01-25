@@ -595,7 +595,7 @@ function getOrderByString($f_order_str=NULL, $default='')
 * to prevent code injection, this escapes quotes for use in <a> tags href attributes
 */
 function asHref(&$url) {
-    return addslashes($str);
+    return addslashes($url);
 }
 /**
 * to prevent code injection all user-entered text should be printed asHtml()
