@@ -249,6 +249,11 @@ $g_config= array(
     'STRING_SIZE_MAX'  => 256000,
 
     /**
+    * Maximum number of news items to show on project page.
+    */
+    'NEWS_ITEMS_MAX'  => 3,
+
+    /**
     * filter html-tags
     * - to prevent from cross site scripting and code intrusion,
     *   all intered variables are by default cleared from html-tags

@@ -435,8 +435,9 @@ function ProjView()
             echo "<div class='text'>";
             
             $count = 0;
+            $limit = confGet('NEWS_ITEMS_MAX');
             foreach($news as $n) {
-                if($count++ >= 3) {
+                if($count++ >= $limit) {
                     break;
                 };
                 echo "<div class='newsBlock'>";
