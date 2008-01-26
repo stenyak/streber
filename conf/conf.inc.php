@@ -160,6 +160,13 @@ $g_config= array(
     'THEME_OVERWRITE'       => NULL,
 
     /**
+    * Adds some custom HTML code as footer and headers. Remember to scape quotes as necessary.
+    * Examples of usage: visitors tracker code, "message of the day" on the top bar, ...
+    */
+    'THEME_HEADER'         => '',
+    'THEME_FOOTER'         => '',
+
+    /**
     * change this to override the automatic selection of the locale based on the current language
     * value must be a comma-delimited list of locale names, see function setLang() for details
     * use value 'C' to disable locales entirely, useful if your system doesn't have proper locale support

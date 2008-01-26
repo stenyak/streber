@@ -723,11 +723,12 @@ class PageHeader extends PageElement
 
             }
 
-            ### account / logout ###
+            ### account / logout / header ###
             else {
                 $link_home= $PH->getLink('personView',$auth->cur_user->name,array('person'=>$auth->cur_user->id),'name');;
 
                 $buffer.="<div id=\"user_functions\">"
+                       . "<span style='padding-right:5%'>".confGet('THEME_HEADER')."</span>"
                        . "<span class=\"user\">". __("you are"). " </span>"
                        . $link_home
                        ."<em>|</em>"
@@ -1308,6 +1309,7 @@ class PageFooter extends PageElement
         }
 
         $buffer.=  "</div>";
+        $buffer.=  confGet('THEME_FOOTER');
         return $buffer;
     }
 }
