@@ -448,14 +448,7 @@ function ProjView()
                 #echo wiki2html($n->description, $project);
                 
                 
-                if($project->validateEditItem($n)) {
-                    echo  wiki2html($n->description, $project, $n->id, 'description');   
-                }
-                else {
-                    echo  wiki2html($n->description, $n);
-                }
-
-
+                echo  wiki2html($n->description, $project, $n->id, 'description');   
                 
                 echo "<span class=comments>";
                 if($comments= $n->getComments()) {
