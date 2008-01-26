@@ -430,13 +430,11 @@ if(!confGet('EMAIL_ADMINISTRATOR') && isset($_SERVER["HTTP_HOST"])) {
 * maps directory name => Title in person profile
 */
 $g_themes=array(
-    'clean'         => 'Clean',
-    #'webbplatsen'   => 'webbplatsen',
-    'custom'        => 'Custom',
-    #'webbplatsen_dark'=> 'webbplatsen_dark',
-#    'default'=>'Default',
-#    'forclients' =>'Client Theme',
-#    'classic' =>'Classic Theme',
+    'starlight'=> 'starlight',
+    'clean'         => 'clean',
+    'webbplatsen'   => 'webbplatsen',
+    'custom'        => 'custom',
+    'webbplatsen_dark'=> 'webbplatsen_dark'
 
 );
 $g_theme_names= array_keys($g_themes);
